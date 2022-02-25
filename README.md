@@ -1,2 +1,2 @@
 # Maven
-2021 - 2022 Intec courses
+2021 - 2022 Intec course
