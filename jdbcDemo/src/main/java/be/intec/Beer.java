@@ -4,10 +4,10 @@ public class Beer {
     private int id;
     private String name;
     private int brewerId;
-    private int CategoryId;
+    private int categoryId;
     private double price;
     private int stock;
-    private double Alcohol;
+    private double alcohol;
     private int version;
     private String image;
 
@@ -15,10 +15,10 @@ public class Beer {
         this.id = id;
         this.name = name;
         this.brewerId = brewerId;
-        CategoryId = categoryId;
+        this.categoryId = categoryId;
         this.price = price;
         this.stock = stock;
-        Alcohol = alcohol;
+        this.alcohol = alcohol;
         this.version = version;
         this.image = image;
     }
@@ -36,7 +36,7 @@ public class Beer {
     }
 
     public int getCategoryId() {
-        return CategoryId;
+        return categoryId;
     }
 
     public double getPrice() {
@@ -48,7 +48,7 @@ public class Beer {
     }
 
     public double getAlcohol() {
-        return Alcohol;
+        return alcohol;
     }
 
     public int getVersion() {
@@ -65,10 +65,10 @@ public class Beer {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", brewerId=" + brewerId +
-                ", CategoryId=" + CategoryId +
+                ", CategoryId=" + categoryId +
                 ", price=" + price +
                 ", stock=" + stock +
-                ", Alcohol=" + Alcohol +
+                ", Alcohol=" + alcohol +
                 ", version=" + version +
                 ", image='" + image + '\'' +
                 '}';
