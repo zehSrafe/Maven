@@ -1,6 +1,6 @@
 package be.intec.view;
 
-import be.intec.data.Employee;
+import be.intec.model.Employee;
 import be.intec.service.EmployeeService;
 
 import java.math.BigDecimal;

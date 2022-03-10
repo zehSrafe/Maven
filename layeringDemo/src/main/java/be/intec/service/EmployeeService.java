@@ -1,7 +1,7 @@
 package be.intec.service;
 
 import be.intec.dao.EmployeeDAO;
-import be.intec.data.Employee;
+import be.intec.model.Employee;
 
 import java.util.List;
 import java.util.Optional;

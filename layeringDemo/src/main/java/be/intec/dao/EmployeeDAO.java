@@ -1,6 +1,6 @@
 package be.intec.dao;
 
-import be.intec.data.Employee;
+import be.intec.model.Employee;
 import be.intec.exception.NonUniqueResultException;
 
 import java.sql.*;

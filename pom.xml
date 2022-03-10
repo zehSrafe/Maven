@@ -11,6 +11,7 @@
     <modules>
         <module>jdbcDemo</module>
         <module>layeringDemo</module>
+        <module>JpaDemo</module>
     </modules>
 
     <properties>

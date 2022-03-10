@@ -1,4 +1,4 @@
-package be.intec.data;
+package be.intec.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,16 +1,16 @@
 package be.intec;
 
-import be.intec.data.ConnectionManager;
-
-import java.sql.Connection;
+import be.intec.dao.ConnectionManager;
+import be.intec.model.Employee;
 
 public class Main {
     public static void main(String[] args) {
         try {
             ConnectionManager.getInstance().init();
-            Connection connection = ConnectionManager.getInstance().getConnection();
 
-            connection.close();
+            Employee employee = new Employee().setName("John").setFamilyName("Dogh");
+
+            ConnectionManager.getInstance().close();
         } catch (Exception e) {
             e.printStackTrace();
         }
