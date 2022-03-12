@@ -16,7 +16,7 @@ public class Order {
     private String orderCity;
     private boolean vatFree;
     private boolean send;
-    private Date orderDate;
+    private String orderDate;
 
     // rank is a SQL reserved keyword and thus will fail when trying to create column named "rank"
     // @Column(name = "the name") will set the name you wish as the name of the column
@@ -95,11 +95,11 @@ public class Order {
         return this;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public Order setOrderDate(Date orderDate) {
+    public Order setOrderDate(String orderDate) {
         this.orderDate = orderDate;
         return this;
     }

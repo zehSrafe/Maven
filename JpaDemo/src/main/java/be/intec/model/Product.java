@@ -2,13 +2,14 @@ package be.intec.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
 public class Product {
     @Id
-    @GeneratedValue // makes Id autoincrement
+    @GeneratedValue(strategy= GenerationType.IDENTITY) // makes Id autoincrement
     private int id;
     private int orderId;
     private String productName;
@@ -68,6 +69,7 @@ public class Product {
                 ", productName='" + productName + '\'' +
                 ", amount=" + amount +
                 ", pricePerUnit=" + pricePerUnit +
+                ", totalPrice=" + pricePerUnit.multiply(BigDecimal.valueOf(amount)) +
                 '}';
     }
 }

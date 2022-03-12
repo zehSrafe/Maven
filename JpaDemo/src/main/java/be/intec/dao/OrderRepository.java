@@ -3,6 +3,9 @@ package be.intec.dao;
 import be.intec.model.Order;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
+import java.util.List;
 
 public class OrderRepository {
     public Order getOrderByIdFromDb(int id) {
@@ -38,5 +41,17 @@ public class OrderRepository {
         em.remove(orderToRemoved);
         em.getTransaction().begin();
         em.getTransaction().commit();
+    }
+
+    public List<Order> getAllOrdersFromDB() {
+        EntityManager em = EntityManagerProvider.getEntityManager();
+        Query queryAllOrders = em.createQuery("SELECT o FROM Order o", Order.class);
+        return queryAllOrders.getResultList();
+    }
+
+    public Order getLastOrderNumberFromDB() throws NoResultException {
+        EntityManager em = EntityManagerProvider.getEntityManager();
+        Query queryOrder = em.createQuery("SELECT o FROM Order o ORDER BY o.id DESC", Order.class).setMaxResults(1);
+        return (Order) queryOrder.getSingleResult();
     }
 }
